@@ -7,10 +7,10 @@ public class PhraseConverter {
 
     public static PhraseResponseDto toPhraseResponseDto(Phrase phrase) {
         PhraseResponseDto response = new PhraseResponseDto(
+                phrase.getId(),
                 phrase.getTitle(),
                 phrase.getPhrase(),
-                phrase.getCharacter(),
-                phrase.getPoster()
+                phrase.getCharacter()
         );
 
         return response;

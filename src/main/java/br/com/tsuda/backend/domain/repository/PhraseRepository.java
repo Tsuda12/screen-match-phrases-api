@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface PhraseRepository extends JpaRepository<Phrase, Long> {
     @Query(value = """
-            SELECT phrase FROM Phrases 
+            SELECT * FROM Phrases 
             ORDER BY random() LIMIT 1
             """, nativeQuery = true)
     Phrase findRandomPhrase();

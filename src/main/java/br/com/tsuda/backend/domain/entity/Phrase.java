@@ -20,15 +20,13 @@ public class Phrase {
     private String title;
     private String phrase;
     private String character;
-    private String poster;
 
     public Phrase() {}
 
-    public Phrase(Long id, String title, String phrase, String character, String poster) {
+    public Phrase(Long id, String title, String phrase, String character) {
         this.id = id;
         this.title = title;
         this.phrase = phrase;
         this.character = character;
-        this.poster = poster;
     }
 }
