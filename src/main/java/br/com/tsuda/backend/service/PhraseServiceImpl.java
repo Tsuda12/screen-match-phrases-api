@@ -1,5 +1,6 @@
 package br.com.tsuda.backend.service;
 
+import br.com.tsuda.backend.controller.request.PhraseRequestDto;
 import br.com.tsuda.backend.controller.response.PhraseResponseDto;
 import br.com.tsuda.backend.domain.converter.PhraseConverter;
 import br.com.tsuda.backend.domain.entity.Phrase;
@@ -13,6 +14,14 @@ public class PhraseServiceImpl implements PhraseService{
 
     public PhraseServiceImpl(PhraseRepository phraseRepository) {
         this.phraseRepository = phraseRepository;
+    }
+
+    @Override
+    public PhraseResponseDto createPhrase(PhraseRequestDto request) {
+        Phrase phrase = PhraseConverter.toPhraseEntity(request);
+        Phrase savedPhrase = phraseRepository.save(phrase);
+
+        return PhraseConverter.toPhraseResponseDto(savedPhrase);
     }
 
     @Override
