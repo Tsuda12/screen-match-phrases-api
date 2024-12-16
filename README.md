@@ -1,5 +1,5 @@
 
-# Screen Match Phrases API 💬
+# Screen Match Phrases 💬
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/Tsuda12/screen-match-phrases-api?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/Tsuda12/screen-match-phrases-api?style=for-the-badge)
